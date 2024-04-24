@@ -4,37 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estudio Jurídico Dra. Blanco & Asoc.</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        /* Custom Styles */
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
         }
         header {
             background-color: #333;
             color: #fff;
             text-align: center;
             padding: 20px 0;
+            border-bottom: 4px solid #fff;
         }
         header img {
             max-width: 200px;
             height: auto;
+            display: block;
+            margin: 0 auto 20px;
+        }
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
         nav {
             background-color: #444;
             text-align: center;
             padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         nav a {
             color: #fff;
             text-decoration: none;
             padding: 0 15px;
+            transition: color 0.3s ease;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
         }
         nav a:hover {
-            background-color: #555;
+            color: #ffc107;
         }
         section {
+            padding: 40px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .card {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            transition: box-shadow 0.3s ease;
+        }
+        .card:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .contact-box {
+            border: 2px solid #333;
+            border-radius: 10px;
             padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
         }
     </style>
 </head>
@@ -45,49 +85,129 @@
     <h1>Estudio Jurídico Dra. Blanco & Asoc.</h1>
 </header>
 
-<nav>
-    <a href="#mision">Misión</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#propuesta">Propuesta Comercial</a>
-    <a href="#contacto">Contacto</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#mision">Misión</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#servicios">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#propuesta">Propuesta Comercial</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </nav>
 
-<section id="mision">
-    <h2>Misión</h2>
-    <p>Nuestra misión es proporcionar asesoramiento legal especializado en diversas áreas del derecho con un enfoque centrado en el cliente. </p>
-    <p>Nos esforzamos por brindar soluciones efectivas, éticas y profesionales a los problemas legales de nuestros clientes, fomentando la confianza y la tranquilidad en cada paso del proceso.</p>
-    <p>Nos comprometemos a educar a nuestros clientes sobre sus derechos y opciones legales de manera clara y comprensible, para que puedan tomar decisiones informadas y sentirse empoderados durante todo el proceso legal.</p>
+<section id="mision" style="background-color: #e9ecef;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="mb-4">Misión</h2>
+                <p class="lead">Nuestra misión es proporcionar asesoramiento legal especializado en diversas áreas del derecho con un enfoque centrado en el cliente.</p>
+                <p class="lead">Nos esforzamos por brindar soluciones efectivas, éticas y profesionales a los problemas legales de nuestros clientes, fomentando la confianza y la tranquilidad en cada paso del proceso.</p>
+                <p class="lead">Nos comprometemos a educar a nuestros clientes sobre sus derechos y opciones legales de manera clara y comprensible, para que puedan tomar decisiones informadas y sentirse empoderados durante todo el proceso legal.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="foto-mision.jpg" alt="Imagen Misión" class="img-fluid">
+            </div>
+        </div>
+    </div>
 </section>
 
-<section id="servicios">
-    <h2>Nuestros Servicios</h2>
-    <ul>
-        <li>Despidos con y sin causa</li>
-        <li>Accidentes laborales</li>
-        <li>Accidentes en el trabajo</li>
-        <li>Jubilaciones</li>
-        <li>Amparos contra prepagas</li>
-        <li>Contratos laborales</li>
-        <li>Reclamaciones por indemnizaciones</li>
-        <li>Asesoramiento en temas de familia y sucesiones</li>
-    </ul>
+<section id="servicios" >
+    <div class="container">
+        <h2 class="text-center mb-4">Nuestros Servicios</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Despidos con y sin causa</h5>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Accidentes laborales</h5>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Accidentes en el trabajo</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Jubilaciones</h5>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Amparos contra prepagas</h5>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Contratos laborales</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
-<section id="propuesta">
-    <h2>Propuesta Comercial</h2>
-    <p>Ofrecemos servicios legales personalizados y adaptados a las necesidades de cada cliente basados en la honestidad, la confianza y la seriedad.</p>
-    <p>Nuestros honorarios son transparentes y competitivos con el resto del mercado.</p>
+<section id="propuesta" style="background-color: #e9ecef;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="foto-propuesta-comercial.jpg" alt="Imagen Propuesta Comercial" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <h2 class="mb-4">Propuesta Comercial</h2>
+                <p class="lead">Ofrecemos servicios legales personalizados y adaptados a las necesidades de cada cliente basados en la honestidad, la confianza y la seriedad.</p>
+                <p class="lead">Nuestros honorarios son transparentes y competitivos con el resto del mercado.</p>
+            </div>
+        </div>
+    </div>
 </section>
 
-<section id="contacto">
-    <h2>Contacto</h2>
-    <p>Contactate con nosotros a través de los siguientes canales:</p>
-    <ul>
-        <li>Teléfono: 123-456-789</li>
-        <li>Correo electrónico: info@estudiojuridicoblancoyasoc.com</li>
-        <li>Dirección: Av. Siempreviva 1234, 5to piso</li>
-    </ul>
+<section id="contacto" class="bg-light" style="background-color: #f8f9fa;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <div class="contact-box">
+                    <h2 class="mb-4">Contacto</h2>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Teléfono: 123-456-789</li>
+                        <li class="list-group-item">Correo electrónico: info@estudiojuridicoblancoyasoc.com</li>
+                        <li class="list-group-item">Dirección: Av. Siempreviva 1234, 5to piso</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Estudio Jurídico Dra. Blanco & Asoc. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 
 </body>
 </html>
